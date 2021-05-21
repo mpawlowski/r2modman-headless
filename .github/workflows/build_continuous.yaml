@@ -1,0 +1,35 @@
+name: Build - Continuous
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: bazelisk version
+
+      - run: make clean build
+
+      - run: git diff-index -p HEAD --
+
+      - run: mkdir release-bin/
+
+      - run: bazelisk run --run_under "echo " //:r2modman-headless 2> /dev/null | sed -e 's/^/BINFILENAME=/' >> $GITHUB_ENV
+
+      - run: cp ${{ env.BINFILENAME }} release-bin/r2modman-headless-latest
+
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            LICENSE
+            release-bin/*

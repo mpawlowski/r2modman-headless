@@ -22,7 +22,7 @@ jobs:
 
       - run: bazelisk run --run_under "echo " //:r2modman-headless 2> /dev/null | sed -e 's/^/BINFILENAME=/' >> $GITHUB_ENV
 
-      - run: cp ${{ env.BINFILENAME }} release-bin/r2modman-headless-latest
+      - run: cp ${{ env.BINFILENAME }} release-bin/r2modman-headless-linux-amd64
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:

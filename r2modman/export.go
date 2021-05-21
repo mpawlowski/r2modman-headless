@@ -21,6 +21,7 @@ func (p *exportParserImpl) Parse(file string) (*ExportR2x, error) {
 	if err != nil {
 		return nil, err
 	}
+	defer reader.Close()
 
 	var exportMetadata *ExportR2x
 

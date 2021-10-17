@@ -5,7 +5,6 @@ import (
 	"io"
 	"net/http"
 	"os"
-	"time"
 )
 
 type ModUtil interface {
@@ -19,7 +18,7 @@ type modUtilImpl struct {
 func (m *modUtilImpl) Download(mod ExportR2xMod) error {
 
 	client := http.Client{
-		Timeout: 5 * time.Second,
+		Timeout: m.config.ThunderstoreCDNTimeout,
 	}
 
 	// Get the data

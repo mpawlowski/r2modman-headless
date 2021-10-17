@@ -19,9 +19,10 @@ import (
 const VERSION = "v0.0.1"
 
 type flags struct {
-	installDir string
-	profileZip string
-	workDir    string
+	installDir             string
+	profileZip             string
+	workDir                string
+	thunderstoreCdnTimeout time.Duration
 
 	version      bool
 	debugEnabled bool
@@ -47,6 +48,7 @@ func init() {
 	flag.StringVar(&options.workDir, "work-dir", "tmp/", "Temporary work directory for downloaded files.")
 	flag.BoolVar(&options.version, "version", false, "Display the current version.")
 	flag.BoolVar(&options.debugEnabled, "debug", false, "Enable verbose debugging.")
+	flag.DurationVar(&options.thunderstoreCdnTimeout, "thunderstore-cdn-timeout", 30*time.Second, "Timeout while downloading each mod.")
 	flag.Parse()
 
 	if options.version {
@@ -90,8 +92,9 @@ func main() {
 
 	fxOptions = append(fxOptions,
 		r2modman.Module(r2modman.Config{
-			InstallDirectory: options.installDir,
-			WorkDirectory:    options.workDir,
+			InstallDirectory:       options.installDir,
+			WorkDirectory:          options.workDir,
+			ThunderstoreCDNTimeout: options.thunderstoreCdnTimeout,
 		}),
 		zip.Module(zip.Config{}),
 		fx.Invoke(run),

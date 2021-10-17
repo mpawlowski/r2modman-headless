@@ -1,11 +1,15 @@
 package r2modman
 
-import "go.uber.org/fx"
+import (
+	"time"
+
+	"go.uber.org/fx"
+)
 
 type Config struct {
-	InstallDirectory   string
-	WorkDirectory      string
-	ThunderstoreCDNUrl string
+	InstallDirectory       string
+	WorkDirectory          string
+	ThunderstoreCDNTimeout time.Duration
 }
 
 func Module(c Config) fx.Option {

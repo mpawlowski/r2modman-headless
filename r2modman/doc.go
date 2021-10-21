@@ -3,7 +3,7 @@ package r2modman
 
 import "fmt"
 
-const thunderstoreApiUrlFormat = "https://cdn.thunderstore.io/live/repository/packages/%s-%d.%d.%d.zip"
+const thunderstoreApiUrlFormat = "https://gcdn.thunderstore.io/live/repository/packages/%s-%d.%d.%d.zip"
 const filenameFormat = "%s-%d.%d.%d.zip"
 
 type ExportR2xModVersion struct {
@@ -24,6 +24,14 @@ func (e ExportR2xMod) Filename() string {
 
 func (e *ExportR2xMod) DownloadUrl() string {
 	return fmt.Sprintf(thunderstoreApiUrlFormat, e.Name, e.Version.Major, e.Version.Minor, e.Version.Patch)
+}
+
+func (e *ExportR2xMod) ThunderstoreKey() string {
+	return e.Name
+}
+
+func (e *ExportR2xMod) ThunderstoreModVersion() string {
+	return fmt.Sprintf("%s-%d.%d.%d", e.Name, e.Version.Major, e.Version.Minor, e.Version.Patch)
 }
 
 type ExportR2x struct {

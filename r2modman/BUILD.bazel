@@ -3,6 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 go_library(
     name = "r2modman",
     srcs = [
+        "api.go",
         "doc.go",
         "export.go",
         "fx.go",

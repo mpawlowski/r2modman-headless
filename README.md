@@ -6,17 +6,19 @@ Command line non-interactive mod loader for [r2modmanPlus](https://github.com/eb
 
 ## usage
 
-    r2modman-headless - Apply a profile export from r2modman to a dedicated server.
-    Example:
-            ./r2modman-headless --install-dir=serverfiles/ --work-dir=work/ --profile-zip=Profile.r2z
-    Flags:
-    -debug
-            Enable verbose debugging.
-    -install-dir string
-            Installation directory of the server.
-    -profile-zip string
-            Profile export to apply.
-    -version
-            Display the current version.
-    -work-dir string
-            Temporary work directory for downloaded files. (default "tmp/")
+        r2modman-headless - Apply a profile export from r2modman to a dedicated server.
+        Example:
+                r2modman-headless --install-dir=serverfiles/ --work-dir=work/ --profile-zip=Profile.r2z
+        Flags:
+        -install-dir string
+                Installation directory of the server.
+        -profile-zip string
+                Profile export to apply.
+        -thunderstore-cdn-host string
+                Hostname of the thunderstore CDN to use. (default "gcdn.thunderstore.io")
+        -thunderstore-cdn-timeout duration
+                Timeout while downloading each mod. (default 30s)
+        -thunderstore-force-download
+                Force re-download of all mods, even if they are already present in the work directory.
+        -work-dir string
+                Temporary work directory for downloaded files. (default "tmp/")

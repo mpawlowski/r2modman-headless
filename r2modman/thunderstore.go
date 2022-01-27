@@ -18,7 +18,7 @@ func (d ModPackagingType) String() string {
 }
 
 func (d ModPackagingType) Directory() string {
-	return [...]string{"", "", "/BepInEx/plugins"}[d]
+	return [...]string{"", "", "BepInEx/plugins"}[d]
 }
 
 func DeterminePackagingType(modZipFilename string) (ModPackagingType, error) {

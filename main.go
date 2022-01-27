@@ -16,17 +16,13 @@ import (
 	"go.uber.org/fx"
 )
 
-const VERSION = "v0.0.1"
-
 type flags struct {
 	installDir                string
 	profileZip                string
 	workDir                   string
 	thunderstoreForceDownload bool
+	thunderstoreCDNHost       string
 	thunderstoreCdnTimeout    time.Duration
-
-	version      bool
-	debugEnabled bool
 }
 
 var Usage = func() {
@@ -47,16 +43,10 @@ func init() {
 	flag.StringVar(&options.installDir, "install-dir", "", "Installation directory of the server.")
 	flag.StringVar(&options.profileZip, "profile-zip", "", "Profile export to apply.")
 	flag.StringVar(&options.workDir, "work-dir", "tmp/", "Temporary work directory for downloaded files.")
-	flag.BoolVar(&options.version, "version", false, "Display the current version.")
-	flag.BoolVar(&options.debugEnabled, "debug", false, "Enable verbose debugging.")
 	flag.BoolVar(&options.thunderstoreForceDownload, "thunderstore-force-download", false, "Force re-download of all mods, even if they are already present in the work directory.")
+	flag.StringVar(&options.thunderstoreCDNHost, "thunderstore-cdn-host", "gcdn.thunderstore.io", "Hostname of the thunderstore CDN to use.")
 	flag.DurationVar(&options.thunderstoreCdnTimeout, "thunderstore-cdn-timeout", 30*time.Second, "Timeout while downloading each mod.")
 	flag.Parse()
-
-	if options.version {
-		fmt.Println(VERSION)
-		os.Exit(0)
-	}
 
 	if options.installDir == "" {
 		log.Fatal("--install-dir must be defined")
@@ -80,23 +70,19 @@ func init() {
 	//normalize directories
 	options.installDir = path.Clean(options.installDir)
 	options.workDir = path.Clean(options.workDir)
-
-	fmt.Println("options", options)
 }
 
 func main() {
 
 	var fxOptions []fx.Option
 
-	if !options.debugEnabled {
-		fxOptions = append(fxOptions, fx.NopLogger)
-	}
-
 	fxOptions = append(fxOptions,
 		r2modman.Module(r2modman.Config{
-			InstallDirectory:       options.installDir,
-			WorkDirectory:          options.workDir,
-			ThunderstoreCDNTimeout: options.thunderstoreCdnTimeout,
+			InstallDirectory:          options.installDir,
+			WorkDirectory:             options.workDir,
+			ThunderstoreCDNTimeout:    options.thunderstoreCdnTimeout,
+			ThunderstoreCDN:           options.thunderstoreCDNHost,
+			ThunderstoreForceDownload: options.thunderstoreForceDownload,
 		}),
 		zip.Module(zip.Config{}),
 		fx.Invoke(run),
@@ -117,9 +103,7 @@ func run(
 ) {
 	lc.Append(fx.Hook{OnStart: func(c context.Context) error {
 
-		log.Println("r2modman-headless", VERSION)
-
-		log.Println("using profile", options.profileZip)
+		log.Println("Using profile", options.profileZip)
 		metadata, err := parser.Parse(options.profileZip)
 		if err != nil {
 			return err
@@ -131,47 +115,19 @@ func run(
 			return err
 		}
 
-		log.Printf("found packages %d packages from thunderstore\n", len(packages))
+		log.Printf("Found packages %d packages from thunderstore\n", len(packages))
 
 		for _, v := range metadata.Mods {
 
 			downloadedZipPath := options.workDir + "/" + v.Filename()
 
-			//check if the file exists, download otherwise
-			_, err := os.Stat(downloadedZipPath)
-			if err != nil || options.thunderstoreForceDownload {
-				log.Println("downloading from", v.DownloadUrl())
-				err = modutil.Download(v)
-				if err != nil {
-					fmt.Println("err", err)
-					return err
-				}
-			} else {
-				log.Println("using existing file", downloadedZipPath)
-			}
-
-			//verify file integrity
-			modFileIsValid := false
-			existingModFile, err := os.Stat(downloadedZipPath)
-			if err != nil {
-				log.Println("expected existing or newly downloaded mod", downloadedZipPath, err)
-				return err
-			}
 			thunderstoreMeta, ok := packages[v.ThunderstoreKey()]
 			if !ok {
-				err = fmt.Errorf("package meta not found in thunderstore: %s", v.ThunderstoreKey())
-				log.Printf("error: %s", err)
-				return err
+				return fmt.Errorf("thunderstore metadata does not exist for: %s", v.ThunderstoreKey())
 			}
-			for _, thunderstoreVersion := range thunderstoreMeta.Versions {
-				if thunderstoreVersion.FullName == v.ThunderstoreModVersion() {
-					modFileIsValid = thunderstoreVersion.FileSize == existingModFile.Size()
-					log.Printf("Verifying integrity: %s, %d, %d", downloadedZipPath, thunderstoreVersion.FileSize, existingModFile.Size())
-				}
-			}
-			if !modFileIsValid {
-				err = fmt.Errorf("mod package %s did not validate", downloadedZipPath)
-				log.Printf("error: %s", err)
+
+			err = modutil.Download(v, thunderstoreMeta)
+			if err != nil {
 				return err
 			}
 
@@ -180,9 +136,7 @@ func run(
 			if err != nil {
 				return err
 			}
-			log.Println("archive has type", packagingType.String())
 			installDir := fmt.Sprintf("%s/%s", options.installDir, packagingType.Directory())
-			log.Println("extracting to", installDir)
 			err = extractor.Extract(downloadedZipPath, installDir)
 			if err != nil {
 				return err
@@ -191,13 +145,13 @@ func run(
 
 		//extract profile to bepinex in install dir
 		bepinDir := options.installDir + "/BepInEx"
-		log.Println(fmt.Sprintf("extracting %s to %s", options.profileZip, bepinDir))
+		log.Println(fmt.Sprintf("Extracting %s to %s", options.profileZip, bepinDir))
 		err = extractor.Extract(options.profileZip, bepinDir)
 		if err != nil {
 			return err
 		}
 
-		log.Println("\n\n\tmod install finished successfully, configure your start script at", options.installDir+"/start_server_bepinex.sh\n")
+		log.Printf("Mod install finished successfully, configure your start script at %s/start_server_bepinex.sh\n", options.installDir)
 
 		return shutdowner.Shutdown()
 

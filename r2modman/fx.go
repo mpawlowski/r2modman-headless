@@ -7,9 +7,11 @@ import (
 )
 
 type Config struct {
-	InstallDirectory       string
-	WorkDirectory          string
-	ThunderstoreCDNTimeout time.Duration
+	InstallDirectory          string
+	WorkDirectory             string
+	ThunderstoreForceDownload bool
+	ThunderstoreCDN           string
+	ThunderstoreCDNTimeout    time.Duration
 }
 
 func Module(c Config) fx.Option {

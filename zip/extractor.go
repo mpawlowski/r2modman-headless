@@ -4,20 +4,19 @@ import (
 	"archive/zip"
 	"fmt"
 	"io"
-	"log"
 	"os"
 	"path/filepath"
 	"strings"
 )
 
 type Extractor interface {
-	Extract(zipFile string, destinationDir string) error
+	Extract(zipFile string, destinationDir string, stripPrefix string) error
 }
 
 type extractorImpl struct {
 }
 
-func (e *extractorImpl) Extract(zipFileName string, destinationDir string) error {
+func (e *extractorImpl) Extract(zipFileName string, destinationDir string, stripPrefix string) error {
 
 	r, err := zip.OpenReader(zipFileName)
 	if err != nil {
@@ -51,6 +50,7 @@ func (e *extractorImpl) Extract(zipFileName string, destinationDir string) error
 		if stripPrefix != "" {
 			stripped := strings.Replace(zipFile.Name, stripPrefix, "", 1)
 			path = filepath.Join(destinationDir, stripped)
+			// log.Println("wat1", stripPrefix, path)
 		}
 
 		if zipFile.FileInfo().IsDir() {
@@ -65,12 +65,16 @@ func (e *extractorImpl) Extract(zipFileName string, destinationDir string) error
 			if err != nil {
 				return err
 			}
+
+			// log.Println("wat2", stripPrefix, path, f.Name())
+
 			defer func() {
 				if err := f.Close(); err != nil {
 					panic(err)
 				}
 			}()
 
+			// log.Printf("extracting zipped file: %s -> %s", zipFile.Name, f.Name())
 			_, err = io.Copy(f, zipReadCloser)
 			if err != nil {
 				return err
@@ -79,27 +83,13 @@ func (e *extractorImpl) Extract(zipFileName string, destinationDir string) error
 		return nil
 	}
 
-	getPrefixToStrip := func(f *zip.File) string {
-		toStrip := ""
-		// go through hardcoded to strip
-		for _, hardcoded := range prefixesToStrip {
-			if strings.HasPrefix(f.Name, hardcoded) {
-				return hardcoded
-			}
-		}
-		if strings.Contains(f.Name, "BepInEx/") {
-			index := strings.LastIndex(f.Name, "BepInEx/")
-			toStrip = f.Name[0:index]
-		}
-		return toStrip
-	}
-
 	for _, f := range r.File {
 
-		stripPrefix := getPrefixToStrip(f)
-		if stripPrefix != "" {
-			log.Printf("stripping prefix '%s' from %s\n", stripPrefix, f.Name)
-		}
+		// stripPrefix := getPrefixToStrip(f)
+		// if stripPrefix != "" {
+		// 	log.Printf("stripping prefix '%s' from %s\n", stripPrefix, f.Name)
+		// }
+
 		err := extractAndWriteFile(f, stripPrefix)
 		if err != nil {
 			return err

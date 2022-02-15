@@ -5,7 +5,6 @@ go_library(
     srcs = [
         "extractor.go",
         "fx.go",
-        "hardcoded.go",
     ],
     importpath = "github.com/mpawlowski/r2modman-headless/zip",
     visibility = ["//visibility:public"],

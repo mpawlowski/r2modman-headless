@@ -132,21 +132,24 @@ func run(
 			}
 
 			//extract modes to install directory
-			packagingType, err := r2modman.DeterminePackagingType(downloadedZipPath)
+			packagingType, prefixToStrip, err := r2modman.DeterminePackagingType(downloadedZipPath)
 			if err != nil {
 				return err
 			}
+
+			log.Printf("packaging type %v", packagingType)
+
 			installDir := fmt.Sprintf("%s/%s", options.installDir, packagingType.Directory())
-			err = extractor.Extract(downloadedZipPath, installDir)
+			err = extractor.Extract(downloadedZipPath, installDir, prefixToStrip)
 			if err != nil {
 				return err
 			}
 		}
 
-		//extract profile to bepinex in install dir
+		// extract profile to bepinex in install dir
 		bepinDir := options.installDir + "/BepInEx"
 		log.Println(fmt.Sprintf("Extracting %s to %s", options.profileZip, bepinDir))
-		err = extractor.Extract(options.profileZip, bepinDir)
+		err = extractor.Extract(options.profileZip, bepinDir, "")
 		if err != nil {
 			return err
 		}

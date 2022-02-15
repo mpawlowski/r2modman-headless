@@ -23,4 +23,4 @@ bin:
 dev: build
 	mkdir -p $(ROOT_DIR)/work/install
 	mkdir -p $(ROOT_DIR)/work/cache
-	bazelisk run //:r2modman-headless -- --install-dir=$(ROOT_DIR)/work/install --profile-zip=$(ROOT_DIR)/r2modman/testdata/Valheim_Creative_Mode.r2z --work-dir=$(ROOT_DIR)/work/cache
+	bazelisk run //:r2modman-headless -- --install-dir=$(ROOT_DIR)/work/install --profile-zip=$(ROOT_DIR)/r2modman/testdata/RealmOfModding_20220214.r2z --work-dir=$(ROOT_DIR)/work/cache

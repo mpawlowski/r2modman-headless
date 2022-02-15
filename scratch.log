@@ -1,0 +1,646 @@
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:gazelle (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:gazelle (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:gazelle up-to-date:
+  bazel-bin/gazelle-runner.bash
+  bazel-bin/gazelle
+INFO: Elapsed time: 0.102s, Critical Path: 0.00s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/gazelle update-repos '-from_file=go.mod' '-to_macro=deps.bzl%go_dependencies'
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:gazelle (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:gazelle (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:gazelle up-to-date:
+  bazel-bin/gazelle-runner.bash
+  bazel-bin/gazelle
+INFO: Elapsed time: 0.093s, Critical Path: 0.00s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/gazelle update
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 5 targets (0 packages loaded, 0 targets configured)
+INFO: Analyzed 5 targets (0 packages loaded, 0 targets configured).
+INFO: Found 4 targets and 1 test target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+INFO: Elapsed time: 0.098s, Critical Path: 0.00s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:r2modman-headless (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:r2modman-headless (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:r2modman-headless up-to-date:
+  bazel-bin/r2modman-headless_/r2modman-headless
+INFO: Elapsed time: 0.121s, Critical Path: 0.00s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/r2modman-headless_/r2modman-headless '--install-dir=/home/marcin/github.com/mpawlowski/r2modman-headless/work/install' '--profile-zip=/home/marcin/github.com/mpawlowski/r2modman-headless/r2modman/testdata/RealmOfModding_20220214.r2z' '--work-dir=/home/marcin/github.com/mpawlowski/r2modman-headless/work/cache'
+INFO: Build completed successfully, 1 total action
+2022/02/14 18:01:21 [Fx] PROVIDE	r2modman.ExportParser <= github.com/mpawlowski/r2modman-headless/r2modman.newExportParser()
+2022/02/14 18:01:21 [Fx] PROVIDE	r2modman.ModUtil <= github.com/mpawlowski/r2modman-headless/r2modman.newModUtil()
+2022/02/14 18:01:21 [Fx] PROVIDE	r2modman.Config <= github.com/mpawlowski/r2modman-headless/r2modman.Module.func1()
+2022/02/14 18:01:21 [Fx] PROVIDE	zip.Extractor <= github.com/mpawlowski/r2modman-headless/zip.newExtractor()
+2022/02/14 18:01:21 [Fx] PROVIDE	zip.Config <= github.com/mpawlowski/r2modman-headless/zip.Module.func1()
+2022/02/14 18:01:21 [Fx] PROVIDE	fx.Lifecycle <= go.uber.org/fx.New.func1()
+2022/02/14 18:01:21 [Fx] PROVIDE	fx.Shutdowner <= go.uber.org/fx.(*App).shutdowner-fm()
+2022/02/14 18:01:21 [Fx] PROVIDE	fx.DotGraph <= go.uber.org/fx.(*App).dotGraph-fm()
+2022/02/14 18:01:21 [Fx] INVOKE		main.run()
+2022/02/14 18:01:21 [Fx] START		main.run()
+2022/02/14 18:01:21 Using profile /home/marcin/github.com/mpawlowski/r2modman-headless/r2modman/testdata/RealmOfModding_20220214.r2z
+2022/02/14 18:01:22 Found packages 1053 packages from thunderstore
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/denikson-BepInExPack_Valheim-5.4.1900.zip
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/config/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/config
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/config/BepInEx.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/config/BepInEx.cfg
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/0Harmony.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/0Harmony.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/0Harmony.xml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/0Harmony.xml
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/0Harmony20.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/0Harmony20.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/BepInEx.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/BepInEx.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/BepInEx.Harmony.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/BepInEx.Harmony.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/BepInEx.Harmony.xml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/BepInEx.Harmony.xml
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/BepInEx.Preloader.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/BepInEx.Preloader.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/BepInEx.Preloader.xml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/BepInEx.Preloader.xml
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/BepInEx.xml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/BepInEx.xml
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/HarmonyXInterop.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/HarmonyXInterop.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/Mono.Cecil.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/Mono.Cecil.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/Mono.Cecil.Mdb.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/Mono.Cecil.Mdb.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/Mono.Cecil.Pdb.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/Mono.Cecil.Pdb.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/Mono.Cecil.Rocks.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/Mono.Cecil.Rocks.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/MonoMod.RuntimeDetour.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/MonoMod.RuntimeDetour.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/MonoMod.RuntimeDetour.xml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/MonoMod.RuntimeDetour.xml
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/MonoMod.Utils.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/MonoMod.Utils.dll
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/core/MonoMod.Utils.xml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/core/MonoMod.Utils.xml
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/patchers/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/patchers
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/plugins/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins
+2022/02/14 18:01:22 stripping prefix 'BepInExPack_Valheim/' from BepInExPack_Valheim/BepInEx/plugins/Valheim.DisplayBepInExInfo.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Valheim.DisplayBepInExInfo.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/doorstop_config.ini
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/doorstop_config.ini
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/doorstop_libs/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/doorstop_libs
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/doorstop_libs/libdoorstop_x64.dylib
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/doorstop_libs/libdoorstop_x64.dylib
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/doorstop_libs/libdoorstop_x64.so
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/doorstop_libs/libdoorstop_x64.so
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/doorstop_libs/libdoorstop_x86.dylib
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/doorstop_libs/libdoorstop_x86.dylib
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/doorstop_libs/libdoorstop_x86.so
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/doorstop_libs/libdoorstop_x86.so
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/start_game_bepinex.sh
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/start_game_bepinex.sh
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/start_server_bepinex.sh
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/start_server_bepinex.sh
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/Mono.Posix.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/Mono.Posix.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/Mono.Security.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/Mono.Security.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/mscorlib.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/mscorlib.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/System.Configuration.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/System.Configuration.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/System.Core.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/System.Core.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/System.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/System.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/System.Numerics.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/System.Numerics.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/System.Security.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/System.Security.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/System.Xml.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/System.Xml.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.AccessibilityModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.AccessibilityModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.AIModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.AIModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.AndroidJNIModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.AndroidJNIModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.AnimationModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.AnimationModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.ARModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.ARModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.AssetBundleModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.AssetBundleModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.AudioModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.AudioModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.ClothModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.ClothModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.ClusterInputModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.ClusterInputModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.ClusterRendererModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.ClusterRendererModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.CoreModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.CoreModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.CrashReportingModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.CrashReportingModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.DirectorModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.DirectorModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.DSPGraphModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.DSPGraphModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.GameCenterModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.GameCenterModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.GridModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.GridModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.HotReloadModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.HotReloadModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.ImageConversionModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.ImageConversionModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.IMGUIModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.IMGUIModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.InputLegacyModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.InputLegacyModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.InputModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.InputModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.JSONSerializeModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.JSONSerializeModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.LocalizationModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.LocalizationModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.ParticleSystemModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.ParticleSystemModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.PerformanceReportingModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.PerformanceReportingModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.Physics2DModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.Physics2DModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.PhysicsModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.PhysicsModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.ProfilerModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.ProfilerModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.ScreenCaptureModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.ScreenCaptureModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.SharedInternalsModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.SharedInternalsModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.SpriteMaskModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.SpriteMaskModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.SpriteShapeModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.SpriteShapeModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.StreamingModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.StreamingModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.SubstanceModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.SubstanceModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.SubsystemsModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.SubsystemsModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.TerrainModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.TerrainModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.TerrainPhysicsModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.TerrainPhysicsModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.TextCoreModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.TextCoreModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.TextRenderingModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.TextRenderingModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.TilemapModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.TilemapModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.TLSModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.TLSModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UI.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UI.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UIElementsModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UIElementsModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UIModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UIModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UmbraModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UmbraModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UNETModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UNETModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityAnalyticsModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityAnalyticsModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityConnectModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityConnectModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityTestProtocolModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityTestProtocolModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityWebRequestAssetBundleModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityWebRequestAssetBundleModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityWebRequestAudioModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityWebRequestAudioModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityWebRequestModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityWebRequestModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityWebRequestTextureModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityWebRequestTextureModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityWebRequestWWWModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.UnityWebRequestWWWModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.VehiclesModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.VehiclesModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.VFXModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.VFXModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.VideoModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.VideoModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.VRModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.VRModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.WindModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.WindModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/unstripped_corlib/UnityEngine.XRModule.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/unstripped_corlib/UnityEngine.XRModule.dll
+2022/02/14 18:01:22 not stripping prefix from BepInExPack_Valheim/winhttp.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInExPack_Valheim/winhttp.dll
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/Nextek-SpeedyPaths-1.0.5.zip
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 not stripping prefix from SpeedyPaths.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/SpeedyPaths.dll
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/LVH-IT-FasterTeleportation-0.3.1.zip
+2022/02/14 18:01:22 not stripping prefix from FasterTeleportation.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/FasterTeleportation.dll
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/MaGic-Quick_Deposit-1.0.1.zip
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from QuickDeposit.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/QuickDeposit.dll
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/Nexus-InstantMonsterLootDrop-0.2.11.zip
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from InstantMonsterDrop.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/InstantMonsterDrop.dll
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/Smoothbrain-CreatureLevelAndLootControl-4.4.5.zip
+2022/02/14 18:01:22 not stripping prefix from Chinese.yml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Chinese.yml
+2022/02/14 18:01:22 not stripping prefix from CreatureConfig.yml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/CreatureConfig.yml
+2022/02/14 18:01:22 not stripping prefix from CreatureLevelControl.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/CreatureLevelControl.dll
+2022/02/14 18:01:22 not stripping prefix from Default.yml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Default.yml
+2022/02/14 18:01:22 not stripping prefix from French.yml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/French.yml
+2022/02/14 18:01:22 not stripping prefix from German.yml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/German.yml
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from ItemConfig.yml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/ItemConfig.yml
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/ontrigger-ValheimPerformanceOptimizations-0.7.6.zip
+2022/02/14 18:01:22 not stripping prefix from CHANGELOG.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/CHANGELOG.md
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 not stripping prefix from ValheimPerformanceOptimizations/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/ValheimPerformanceOptimizations
+2022/02/14 18:01:22 not stripping prefix from ValheimPerformanceOptimizations/ValheimPerformanceOptimizations.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/ValheimPerformanceOptimizations/ValheimPerformanceOptimizations.dll
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/ValheimPlus-ValheimPlus-9.9.7.zip
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/ValheimPlus.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/ValheimPlus.dll
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/virtuaCode-TrashItems-1.2.4.zip
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 not stripping prefix from TrashItems.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/TrashItems.dll
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/RandyKnapp-EquipmentAndQuickSlots-2.0.14.zip
+2022/02/14 18:01:22 not stripping prefix from EquipmentAndQuickSlots.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/EquipmentAndQuickSlots.dll
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/RandyKnapp-ExtendedItemDataFramework-1.0.7.zip
+2022/02/14 18:01:22 not stripping prefix from ExtendedItemDataFramework.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/ExtendedItemDataFramework.dll
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/RandyKnapp-EpicLoot-0.8.8.zip
+2022/02/14 18:01:22 not stripping prefix from files/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files
+2022/02/14 18:01:22 not stripping prefix from files/abilities.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/abilities.json
+2022/02/14 18:01:22 not stripping prefix from files/adventuredata.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/adventuredata.json
+2022/02/14 18:01:22 not stripping prefix from files/enchantcosts.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/enchantcosts.json
+2022/02/14 18:01:22 not stripping prefix from files/EpicLoot.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/EpicLoot.dll
+2022/02/14 18:01:22 not stripping prefix from files/iteminfo.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/iteminfo.json
+2022/02/14 18:01:22 not stripping prefix from files/itemnames.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/itemnames.json
+2022/02/14 18:01:22 not stripping prefix from files/legendaries.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/legendaries.json
+2022/02/14 18:01:22 not stripping prefix from files/loottables.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/loottables.json
+2022/02/14 18:01:22 not stripping prefix from files/magiceffects.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/magiceffects.json
+2022/02/14 18:01:22 not stripping prefix from files/recipes.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/recipes.json
+2022/02/14 18:01:22 not stripping prefix from files/translations.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/files/translations.json
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/sweetgiorni-AnyPortal-1.0.4.zip
+2022/02/14 18:01:22 not stripping prefix from AnyPortal.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/AnyPortal.dll
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/Advize-PlantEverything-1.9.1.zip
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from Advize_PlantEverything.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Advize_PlantEverything.dll
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/Skrip-SkToolbox-1.10.5.zip
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 not stripping prefix from SkToolboxValheim.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/SkToolboxValheim.dll
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/ValheimModding-HookGenPatcher-0.0.3.zip
+2022/02/14 18:01:22 not stripping prefix from config/HookGenPatcher.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/config/HookGenPatcher.cfg
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from patchers/BepInEx.MonoMod.HookGenPatcher/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/patchers/BepInEx.MonoMod.HookGenPatcher
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 not stripping prefix from patchers/BepInEx.MonoMod.HookGenPatcher/BepInEx.MonoMod.HookGenPatcher.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/patchers/BepInEx.MonoMod.HookGenPatcher/BepInEx.MonoMod.HookGenPatcher.dll
+2022/02/14 18:01:22 not stripping prefix from patchers/BepInEx.MonoMod.HookGenPatcher/MonoMod.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/patchers/BepInEx.MonoMod.HookGenPatcher/MonoMod.dll
+2022/02/14 18:01:22 not stripping prefix from patchers/BepInEx.MonoMod.HookGenPatcher/MonoMod.RuntimeDetour.HookGen.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/patchers/BepInEx.MonoMod.HookGenPatcher/MonoMod.RuntimeDetour.HookGen.dll
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/ValheimModding-Jotunn-2.5.0.zip
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 stripping prefix 'plugins' from plugins/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins
+2022/02/14 18:01:22 stripping prefix 'plugins' from plugins/Jotunn.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Jotunn.dll
+2022/02/14 18:01:22 stripping prefix 'plugins' from plugins/Jotunn.dll.mdb
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Jotunn.dll.mdb
+2022/02/14 18:01:22 stripping prefix 'plugins' from plugins/Jotunn.pdb
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Jotunn.pdb
+2022/02/14 18:01:22 stripping prefix 'plugins' from plugins/Jotunn.xml
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Jotunn.xml
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/OdinPlus-Clutter-0.1.0.zip
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 stripping prefix 'plugins' from plugins/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins
+2022/02/14 18:01:22 stripping prefix 'plugins/Clutter/' from plugins/Clutter/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins
+2022/02/14 18:01:22 stripping prefix 'plugins/Clutter/' from plugins/Clutter/Assets/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Assets
+2022/02/14 18:01:22 stripping prefix 'plugins/Clutter/' from plugins/Clutter/Assets/Translations/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Assets/Translations
+2022/02/14 18:01:22 stripping prefix 'plugins/Clutter/' from plugins/Clutter/Assets/Translations/English/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Assets/Translations/English
+2022/02/14 18:01:22 stripping prefix 'plugins/Clutter/' from plugins/Clutter/Assets/Translations/English/Clutter.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Assets/Translations/English/Clutter.json
+2022/02/14 18:01:22 stripping prefix 'plugins/Clutter/' from plugins/Clutter/Clutter.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Clutter.dll
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/Amar1729-BetterLadders-0.2.0.zip
+2022/02/14 18:01:22 not stripping prefix from BetterLadders.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/BetterLadders.dll
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/MathiasDecrock-PlanBuild-0.9.3.zip
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 stripping prefix 'plugins' from plugins/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/CHANGELOG.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/CHANGELOG.md
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/PlanBuild.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/PlanBuild.dll
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/Translations/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Translations
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/Translations/English/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Translations/English
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/Translations/English/PlanBuild.english.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Translations/English/PlanBuild.english.json
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/Translations/German/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Translations/German
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/Translations/German/PlanBuild.Deutsch.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Translations/German/PlanBuild.Deutsch.json
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/Translations/Portuguese_Brazilian/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Translations/Portuguese_Brazilian
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/Translations/Portuguese_Brazilian/PlanBuild.Portuguese_Brazilian.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Translations/Portuguese_Brazilian/PlanBuild.Portuguese_Brazilian.json
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/Translations/Russian/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Translations/Russian
+2022/02/14 18:01:22 stripping prefix 'plugins/PlanBuild/' from plugins/PlanBuild/Translations/Russian/PlanBuild.russian.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/Translations/Russian/PlanBuild.russian.json
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Verifying integrity: /home/marcin/github.com/mpawlowski/r2modman-headless/work/cache/Fantu-Sages_Vault-1.1.4.zip
+2022/02/14 18:01:22 not stripping prefix from icon.png
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/icon.png
+2022/02/14 18:01:22 not stripping prefix from manifest.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/manifest.json
+2022/02/14 18:01:22 stripping prefix 'plugins' from plugins/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins
+2022/02/14 18:01:22 stripping prefix 'plugins' from plugins/SagesVault.dll
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/SagesVault.dll
+2022/02/14 18:01:22 not stripping prefix from README.md
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/BepInEx/plugins/README.md
+2022/02/14 18:01:22 Extracting /home/marcin/github.com/mpawlowski/r2modman-headless/r2modman/testdata/RealmOfModding_20220214.r2z to /home/marcin/github.com/mpawlowski/r2modman-headless/work/install
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/MathiasDecrock-PlanBuild/PlanBuild/Translations/English/PlanBuild.english.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/MathiasDecrock-PlanBuild/PlanBuild/Translations/English/PlanBuild.english.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/MathiasDecrock-PlanBuild/PlanBuild/Translations/German/PlanBuild.Deutsch.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/MathiasDecrock-PlanBuild/PlanBuild/Translations/German/PlanBuild.Deutsch.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/MathiasDecrock-PlanBuild/PlanBuild/Translations/Portuguese_Brazilian/PlanBuild.Portuguese_Brazilian.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/MathiasDecrock-PlanBuild/PlanBuild/Translations/Portuguese_Brazilian/PlanBuild.Portuguese_Brazilian.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/MathiasDecrock-PlanBuild/PlanBuild/Translations/Russian/PlanBuild.russian.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/MathiasDecrock-PlanBuild/PlanBuild/Translations/Russian/PlanBuild.russian.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/OdinPlus-Clutter/Clutter/Assets/Translations/English/Clutter.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/OdinPlus-Clutter/Clutter/Assets/Translations/English/Clutter.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/RandyKnapp-EpicLoot/abilities.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/RandyKnapp-EpicLoot/abilities.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/RandyKnapp-EpicLoot/adventuredata.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/RandyKnapp-EpicLoot/adventuredata.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/RandyKnapp-EpicLoot/enchantcosts.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/RandyKnapp-EpicLoot/enchantcosts.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/RandyKnapp-EpicLoot/iteminfo.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/RandyKnapp-EpicLoot/iteminfo.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/RandyKnapp-EpicLoot/itemnames.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/RandyKnapp-EpicLoot/itemnames.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/RandyKnapp-EpicLoot/legendaries.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/RandyKnapp-EpicLoot/legendaries.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/RandyKnapp-EpicLoot/loottables.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/RandyKnapp-EpicLoot/loottables.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/RandyKnapp-EpicLoot/magiceffects.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/RandyKnapp-EpicLoot/magiceffects.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/RandyKnapp-EpicLoot/recipes.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/RandyKnapp-EpicLoot/recipes.json
+2022/02/14 18:01:22 stripping prefix 'BepInEx/' from BepInEx/plugins/RandyKnapp-EpicLoot/translations.json
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/plugins/RandyKnapp-EpicLoot/translations.json
+2022/02/14 18:01:22 not stripping prefix from config/advize.PlantEverything.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/advize.PlantEverything.cfg
+2022/02/14 18:01:22 not stripping prefix from config/aedenthorn.InstantMonsterDrop.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/aedenthorn.InstantMonsterDrop.cfg
+2022/02/14 18:01:22 not stripping prefix from config/BepInEx.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/BepInEx.cfg
+2022/02/14 18:01:22 not stripping prefix from config/com.plumga.Clutter.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/com.plumga.Clutter.cfg
+2022/02/14 18:01:22 not stripping prefix from config/com.Skrip.SkToolbox.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/com.Skrip.SkToolbox.cfg
+2022/02/14 18:01:22 not stripping prefix from config/custom_raids.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/custom_raids.cfg
+2022/02/14 18:01:22 not stripping prefix from config/custom_raids.raids.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/custom_raids.raids.cfg
+2022/02/14 18:01:22 not stripping prefix from config/custom_raids.supplemental.deathsquitoseason.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/custom_raids.supplemental.deathsquitoseason.cfg
+2022/02/14 18:01:22 not stripping prefix from config/custom_raids.supplemental.ragnarok.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/custom_raids.supplemental.ragnarok.cfg
+2022/02/14 18:01:22 not stripping prefix from config/dev.ontrigger.vpo.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/dev.ontrigger.vpo.cfg
+2022/02/14 18:01:22 not stripping prefix from config/HookGenPatcher.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/HookGenPatcher.cfg
+2022/02/14 18:01:22 not stripping prefix from config/MagicOverhaulLocalization/
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/MagicOverhaulLocalization
+2022/02/14 18:01:22 not stripping prefix from config/marcopogo.PlanBuild.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/marcopogo.PlanBuild.cfg
+2022/02/14 18:01:22 not stripping prefix from config/nex.SpeedyPaths.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/nex.SpeedyPaths.cfg
+2022/02/14 18:01:22 not stripping prefix from config/org.bepinex.plugins.creaturelevelcontrol.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/org.bepinex.plugins.creaturelevelcontrol.cfg
+2022/02/14 18:01:22 not stripping prefix from config/org.bepinex.valheim.displayinfo.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/org.bepinex.valheim.displayinfo.cfg
+2022/02/14 18:01:22 not stripping prefix from config/randyknapp.mods.epicloot.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/randyknapp.mods.epicloot.cfg
+2022/02/14 18:01:22 not stripping prefix from config/randyknapp.mods.equipmentandquickslots.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/randyknapp.mods.equipmentandquickslots.cfg
+2022/02/14 18:01:22 not stripping prefix from config/randyknapp.mods.extendeditemdataframework.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/randyknapp.mods.extendeditemdataframework.cfg
+2022/02/14 18:01:22 not stripping prefix from config/spawn_that.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/spawn_that.cfg
+2022/02/14 18:01:22 not stripping prefix from config/spawn_that.local_spawners_advanced.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/spawn_that.local_spawners_advanced.cfg
+2022/02/14 18:01:22 not stripping prefix from config/spawn_that.simple.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/spawn_that.simple.cfg
+2022/02/14 18:01:22 not stripping prefix from config/spawn_that.world_spawners_advanced.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/spawn_that.world_spawners_advanced.cfg
+2022/02/14 18:01:22 not stripping prefix from config/valheim_plus.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/valheim_plus.cfg
+2022/02/14 18:01:22 not stripping prefix from config/virtuacode.valheim.trashitems.cfg
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/config/virtuacode.valheim.trashitems.cfg
+2022/02/14 18:01:22 not stripping prefix from export.r2x
+2022/02/14 18:01:22 extracting /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/export.r2x
+2022/02/14 18:01:22 Mod install finished successfully, configure your start script at /home/marcin/github.com/mpawlowski/r2modman-headless/work/install/start_server_bepinex.sh
+2022/02/14 18:01:22 [Fx] RUNNING
+2022/02/14 18:01:22 [Fx] TERMINATED

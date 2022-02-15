@@ -79,25 +79,27 @@ func (e *extractorImpl) Extract(zipFileName string, destinationDir string) error
 		return nil
 	}
 
-	// be default we dont strip a prefix at any destination
-	// every folder above the directory which contains "BepInEx" needs to be stripped
-	stripPrefix := ""
-
-	for _, f := range r.File {
-		if strings.Contains(f.Name, "BepInEx/") {
-
-			index := strings.Index(f.Name, "BepInEx/")
-
-			stripPrefix = f.Name[0:index]
+	getPrefixToStrip := func(f *zip.File) string {
+		toStrip := ""
+		// go through hardcoded to strip
+		for _, hardcoded := range prefixesToStrip {
+			if strings.HasPrefix(f.Name, hardcoded) {
+				return hardcoded
+			}
 		}
-	}
-
-	if stripPrefix != "" {
-		log.Println(fmt.Sprintf("stripping prefix '%s' from all files inside %s", stripPrefix, zipFileName))
+		if strings.Contains(f.Name, "BepInEx/") {
+			index := strings.LastIndex(f.Name, "BepInEx/")
+			toStrip = f.Name[0:index]
+		}
+		return toStrip
 	}
 
 	for _, f := range r.File {
 
+		stripPrefix := getPrefixToStrip(f)
+		if stripPrefix != "" {
+			log.Printf("stripping prefix '%s' from %s\n", stripPrefix, f.Name)
+		}
 		err := extractAndWriteFile(f, stripPrefix)
 		if err != nil {
 			return err

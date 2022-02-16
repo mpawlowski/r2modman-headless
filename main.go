@@ -119,7 +119,7 @@ func run(
 
 		for _, v := range metadata.Mods {
 
-			downloadedZipPath := options.workDir + "/" + v.Filename()
+			downloadedZipPath := path.Join(options.workDir, v.Filename())
 
 			thunderstoreMeta, ok := packages[v.ThunderstoreKey()]
 			if !ok {
@@ -147,7 +147,7 @@ func run(
 		}
 
 		// extract profile to bepinex in install dir
-		bepinDir := options.installDir + "/BepInEx"
+		bepinDir := path.Join(options.installDir, "/BepInEx")
 		log.Println(fmt.Sprintf("Extracting %s to %s", options.profileZip, bepinDir))
 		err = extractor.Extract(options.profileZip, bepinDir, "")
 		if err != nil {

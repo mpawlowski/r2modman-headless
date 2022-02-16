@@ -15,6 +15,7 @@
 bazel-*
 
 work/**
+scratch*
 
 # Generated Binaries
 r2modman-headless*

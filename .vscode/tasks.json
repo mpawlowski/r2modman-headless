@@ -4,7 +4,7 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "make build bin",
+            "command": "make build",
             "group": {
                 "kind": "build",
                 "isDefault": true

@@ -119,6 +119,8 @@ func run(
 
 		for _, v := range metadata.Mods {
 
+			log.Printf("processing %s\n", v.Name)
+
 			downloadedZipPath := path.Join(options.workDir, v.Filename())
 
 			thunderstoreMeta, ok := packages[v.ThunderstoreKey()]
@@ -137,22 +139,34 @@ func run(
 				return err
 			}
 
-			log.Printf("packaging type %v", packagingType)
-
 			installDir := fmt.Sprintf("%s/%s", options.installDir, packagingType.Directory())
+
+			if packagingType == r2modman.ModPackagingTypePlugin {
+				installDir += fmt.Sprintf("/plugins/%s", v.Name)
+			}
+
+			if packagingType == r2modman.ModPackagingTypeRootDLL {
+				installDir += fmt.Sprintf("/%s", v.Name)
+			}
+
+			log.Printf("Packaging Type: %s", packagingType)
+			log.Printf("Install Dir: %s", installDir)
+			log.Printf("Prefix Strip: %s", prefixToStrip)
 			err = extractor.Extract(downloadedZipPath, installDir, prefixToStrip)
 			if err != nil {
 				return err
 			}
+
+			log.Printf("")
 		}
 
-		// extract profile to bepinex in install dir
-		bepinDir := path.Join(options.installDir, "/BepInEx")
-		log.Println(fmt.Sprintf("Extracting %s to %s", options.profileZip, bepinDir))
-		err = extractor.Extract(options.profileZip, bepinDir, "")
-		if err != nil {
-			return err
-		}
+		// // extract profile to bepinex in install dir
+		// bepinDir := path.Join(options.installDir, "/BepInEx")
+		// log.Printf(fmt.Sprintf("Extracting %s to %s", options.profileZip, bepinDir))
+		// err = extractor.Extract(options.profileZip, bepinDir, "")
+		// if err != nil {
+		// 	return err
+		// }
 
 		log.Printf("Mod install finished successfully, configure your start script at %s/start_server_bepinex.sh\n", options.installDir)
 

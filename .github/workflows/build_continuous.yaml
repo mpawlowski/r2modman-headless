@@ -7,20 +7,28 @@ on:
 jobs:
   build:
 
-    runs-on: [self-hosted, linux, x64]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version: [ '1.21.x' ]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - name: Setup Go ${{ matrix.go-version }}
+        uses: actions/setup-go@v4
+        with:
+          go-version: ${{ matrix.go-version }}
 
-      - run: bazelisk version
+      - name: Dependencies
+        run: |
+          go get .
+        
+      - name: Build
+        run: |
+          go build
 
-      - run: make clean build bin
-
-      - run: git diff-index -p HEAD --
-
-      - run: mkdir release-bin/
-
-      - run: cp r2modman-headless release-bin/r2modman-headless-linux-amd64
+      - name: Copy Binary
+        run: cp r2modman-headless release-bin/r2modman-headless-linux-amd64
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:

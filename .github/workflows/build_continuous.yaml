@@ -25,7 +25,7 @@ jobs:
         
       - name: Build
         run: |
-          go build
+          CGO_ENABLED=0 go build
 
       - name: Copy Binary
         run: |

@@ -28,7 +28,9 @@ jobs:
           go build
 
       - name: Copy Binary
-        run: cp r2modman-headless release-bin/r2modman-headless-linux-amd64
+        run: |
+          mkdir -p release-bin/
+          cp r2modman-headless release-bin/r2modman-headless-linux-amd64
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:

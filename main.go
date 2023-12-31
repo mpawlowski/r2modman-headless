@@ -160,13 +160,13 @@ func run(
 			log.Printf("")
 		}
 
-		// // extract profile to bepinex in install dir
-		// bepinDir := path.Join(options.installDir, "/BepInEx")
-		// log.Printf(fmt.Sprintf("Extracting %s to %s", options.profileZip, bepinDir))
-		// err = extractor.Extract(options.profileZip, bepinDir, "")
-		// if err != nil {
-		// 	return err
-		// }
+		// extract profile to bepinex in install dir
+		bepinDir := path.Join(options.installDir, "/BepInEx")
+		log.Printf(fmt.Sprintf("Extracting %s to %s", options.profileZip, bepinDir))
+		err = extractor.Extract(options.profileZip, bepinDir, "BepInEx")
+		if err != nil {
+			return err
+		}
 
 		log.Printf("Mod install finished successfully, configure your start script at %s/start_server_bepinex.sh\n", options.installDir)
 

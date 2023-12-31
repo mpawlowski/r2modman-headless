@@ -4,11 +4,17 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "make build",
+            "command": "go build",
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Dev",
+            "type": "shell",
+            "command": "go run main.go --install-dir=work/install --profile-zip=r2modman/testdata/mods-5.r2z --work-dir=work/cache",
+            "problemMatcher": []
         }
     ]
 }

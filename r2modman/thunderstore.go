@@ -64,5 +64,5 @@ func DeterminePackagingType(modZipFilename string) (modType ModPackagingType, pr
 	}
 
 	// assume Plugin by default
-	return ModPackagingTypePlugin, "", nil
+	return ModPackagingTypePlugin, "plugins", nil
 }

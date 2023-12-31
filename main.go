@@ -162,7 +162,6 @@ func run(
 
 		// extract profile to bepinex in install dir
 		bepinDir := path.Join(options.installDir, "/BepInEx")
-		log.Printf(fmt.Sprintf("Extracting %s to %s", options.profileZip, bepinDir))
 		err = extractor.Extract(options.profileZip, bepinDir, "BepInEx")
 		if err != nil {
 			return err

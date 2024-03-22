@@ -13,8 +13,8 @@
         {
             "label": "Dev",
             "type": "shell",
-            "command": "rm -rf work/install && mkdir -p work/install && go run main.go --install-dir=work/install --profile-zip=r2modman/testdata/Xmas_Valheim_v1.2_1704056810687.r2z --work-dir=work/cache",
-            "problemMatcher": []
+            "command": "rm -rf work/install && mkdir -p work/install && go run main.go --install-dir=work/install --profile-zip=Profile.r2z --work-dir=work/cache",
+            "problemMatcher": ["$go"]
         }
     ]
 }

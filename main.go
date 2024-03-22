@@ -212,6 +212,7 @@ func registerLifecycleHooks(
 		go func(errChan chan error, shutdowner fx.Shutdowner) {
 			err := <-errChan
 			if err != nil {
+				log.Printf("Error processing mods: %v", err)
 				shutdowner.Shutdown(fx.ExitCode(1))
 				return
 			}

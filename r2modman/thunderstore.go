@@ -40,7 +40,7 @@ func DeterminePackagingType(modZipFilename string) (modType ModPackagingType, pr
 	// loop through all the files in the archive to check determine what kind of packaging the mod has
 	for _, f := range r.File {
 
-		if !strings.ContainsAny(f.Name, "/") && strings.HasSuffix(f.Name, ".dll") {
+		if (!strings.ContainsAny(f.Name, "\\") && !strings.ContainsAny(f.Name, "/")) && strings.HasSuffix(f.Name, ".dll") {
 			containsDLLinRoot = true
 		}
 

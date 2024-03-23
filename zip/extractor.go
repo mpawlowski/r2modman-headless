@@ -53,6 +53,10 @@ func ExtractAndWriteFile(zipEntry *zip.File, normalizedDestination string) error
 	return nil
 }
 
+func isProbablyDirectory(f *zip.File) bool {
+	return f.FileInfo().IsDir() || strings.HasSuffix(f.Name, "/") || strings.HasSuffix(f.Name, "\\")
+}
+
 func (e *extractorImpl) Extract(zipFileName string, destinationDir string, stripPrefix string) error {
 
 	r, err := zip.OpenReader(zipFileName)
@@ -72,10 +76,14 @@ func (e *extractorImpl) Extract(zipFileName string, destinationDir string, strip
 			// Convert to Unix path format
 			normalizedFilePath = strings.ReplaceAll(f.Name, "\\", "/")
 		}
-
 		normalizedFilePath, _ = strings.CutPrefix(normalizedFilePath, stripPrefix)
-
 		destination := path.Join(destinationDir, normalizedFilePath)
+
+		if isProbablyDirectory(f) {
+			fmt.Println("File is probably a directory", f.Name)
+			os.MkdirAll(destination, os.ModeDir|os.ModePerm)
+			continue
+		}
 
 		err := ExtractAndWriteFile(f, destination)
 		if err != nil {

@@ -31,7 +31,7 @@ jobs:
 
       - name: Build
         run: |
-          CGO_ENABLED=0 go build "-X main.gitBranch=$GIT_BRANCH -X main.gitHash=$GIT_HASH -X main.gitDirty=$GIT_DIRTY"
+          CGO_ENABLED=0 go build -ldflags "-X main.gitBranch=$GIT_BRANCH -X main.gitHash=$GIT_HASH -X main.gitDirty=$GIT_DIRTY"
       - name: Copy Binary
         run: |
           mkdir -p release-bin/

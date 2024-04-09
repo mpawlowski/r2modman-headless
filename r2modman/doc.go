@@ -1,4 +1,4 @@
-//Package r2modman contains utilities for interacting with r2modman/thunderstore
+// Package r2modman contains utilities for interacting with r2modman/thunderstore
 package r2modman
 
 import "fmt"

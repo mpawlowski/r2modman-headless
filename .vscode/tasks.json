@@ -4,7 +4,12 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "go build",
+            "command": "go",
+            "args": [
+                "build",
+                "-ldflags",
+                "\"-X main.gitBranch=`git rev-parse --abbrev-ref HEAD` -X main.gitHash=`git rev-parse --verify HEAD` -X main.gitDirty=`git diff --quiet; [ $? -eq 0 ] && echo false || echo true`\"",
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -13,7 +18,7 @@
         {
             "label": "Dev",
             "type": "shell",
-            "command": "rm -rf work/install && mkdir -p work/install && go run main.go --install-dir=work/install --profile-zip=Profile.r2z --work-dir=work/cache",
+            "command": "rm -rf work/install && mkdir -p work/install && go run main.go build.go --install-dir=work/install --profile-zip=Profile.r2z --work-dir=work/cache",
             "problemMatcher": ["$go"]
         }
     ]

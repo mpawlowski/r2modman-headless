@@ -23,6 +23,7 @@ type flags struct {
 	thunderstoreForceDownload bool
 	thunderstoreCDNHost       string
 	thunderstoreCdnTimeout    time.Duration
+	version                   bool
 }
 
 var Usage = func() {
@@ -47,7 +48,14 @@ func init() {
 	flag.BoolVar(&options.thunderstoreForceDownload, "thunderstore-force-download", false, "Force re-download of all mods, even if they are already present in the work directory.")
 	flag.StringVar(&options.thunderstoreCDNHost, "thunderstore-cdn-host", "gcdn.thunderstore.io", "Hostname of the thunderstore CDN to use.")
 	flag.DurationVar(&options.thunderstoreCdnTimeout, "thunderstore-cdn-timeout", 30*time.Second, "Timeout while downloading each mod.")
+	flag.BoolVar(&options.version, "version", false, "Print version and exit.")
 	flag.Parse()
+
+	if options.version {
+		info := GetBuildInfo()
+		fmt.Println(info.toJson())
+		os.Exit(0)
+	}
 
 	if options.installDir == "" {
 		log.Fatal("--install-dir must be defined")
@@ -71,9 +79,13 @@ func init() {
 	//normalize directories
 	options.installDir = path.Clean(options.installDir)
 	options.workDir = path.Clean(options.workDir)
+
 }
 
 func main() {
+
+	info := GetBuildInfo()
+	fmt.Println(info.toJson())
 
 	var fxOptions []fx.Option
 

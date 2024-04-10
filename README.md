@@ -14,12 +14,18 @@ Command line non-interactive mod loader for [r2modmanPlus](https://github.com/eb
                 Installation directory of the server.
         -profile-zip string
                 Profile export to apply.
+        -run-timeout duration
+                Total maximum runtime before giving up. (default 5m0s)
         -thunderstore-cdn-host string
                 Hostname of the thunderstore CDN to use. (default "gcdn.thunderstore.io")
         -thunderstore-cdn-timeout duration
                 Timeout while downloading each mod. (default 30s)
         -thunderstore-force-download
                 Force re-download of all mods, even if they are already present in the work directory.
+        -thunderstore-metadata-url string
+                URL to the thunderstore metadata API. This can vary between games. (default "https://thunderstore.io/c/valheim/api/v1/package/")
+        -version
+                Print version and exit.
         -work-dir string
                 Temporary work directory for downloaded files. (default "tmp/")
                 

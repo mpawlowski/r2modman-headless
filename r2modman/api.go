@@ -7,8 +7,6 @@ import (
 	"time"
 )
 
-const ValheimPackagesAPIUrl = "https://valheim.thunderstore.io/api/v1/package/"
-
 type APIPackageResponse struct {
 	Name     string `json:"name"`
 	FullName string `json:"full_name"`
@@ -21,9 +19,9 @@ type APIPackageResponse struct {
 
 var myClient = &http.Client{Timeout: 10 * time.Second}
 
-func GetPackagesMetadata(ctx context.Context) (packages map[string]*APIPackageResponse, err error) {
+func GetPackagesMetadata(ctx context.Context, metadataUrl string) (packages map[string]*APIPackageResponse, err error) {
 
-	r, err := myClient.Get(ValheimPackagesAPIUrl)
+	r, err := myClient.Get(metadataUrl)
 	if err != nil {
 		return
 	}

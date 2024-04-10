@@ -16,14 +16,15 @@ import (
 )
 
 type flags struct {
-	runTimeout                time.Duration
 	installDir                string
 	profileZip                string
-	workDir                   string
-	thunderstoreForceDownload bool
+	runTimeout                time.Duration
 	thunderstoreCDNHost       string
 	thunderstoreCdnTimeout    time.Duration
+	thunderstoreForceDownload bool
+	thunderstoreMetadataURL   string
 	version                   bool
+	workDir                   string
 }
 
 var Usage = func() {
@@ -42,13 +43,14 @@ func init() {
 
 	options = flags{}
 	flag.DurationVar(&options.runTimeout, "run-timeout", 5*time.Minute, "Total maximum runtime before giving up.")
-	flag.StringVar(&options.installDir, "install-dir", "", "Installation directory of the server.")
 	flag.StringVar(&options.profileZip, "profile-zip", "", "Profile export to apply.")
-	flag.StringVar(&options.workDir, "work-dir", "tmp/", "Temporary work directory for downloaded files.")
+	flag.StringVar(&options.installDir, "install-dir", "", "Installation directory of the server.")
 	flag.BoolVar(&options.thunderstoreForceDownload, "thunderstore-force-download", false, "Force re-download of all mods, even if they are already present in the work directory.")
 	flag.StringVar(&options.thunderstoreCDNHost, "thunderstore-cdn-host", "gcdn.thunderstore.io", "Hostname of the thunderstore CDN to use.")
 	flag.DurationVar(&options.thunderstoreCdnTimeout, "thunderstore-cdn-timeout", 30*time.Second, "Timeout while downloading each mod.")
+	flag.StringVar(&options.thunderstoreMetadataURL, "thunderstore-metadata-url", "https://thunderstore.io/c/valheim/api/v1/package/", "URL to the thunderstore metadata API. This can vary between games.")
 	flag.BoolVar(&options.version, "version", false, "Print version and exit.")
+	flag.StringVar(&options.workDir, "work-dir", "tmp/", "Temporary work directory for downloaded files.")
 	flag.Parse()
 
 	if options.version {
@@ -138,7 +140,7 @@ func run(
 		return err
 	}
 
-	packages, err := r2modman.GetPackagesMetadata(ctx)
+	packages, err := r2modman.GetPackagesMetadata(ctx, options.thunderstoreMetadataURL)
 	if err != nil {
 		log.Printf("unable to pull thunderstore api: %s", err)
 		return err

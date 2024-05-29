@@ -22,6 +22,8 @@ Command line non-interactive mod loader for [r2modmanPlus](https://github.com/eb
                 Timeout while downloading each mod. (default 30s)
         -thunderstore-force-download
                 Force re-download of all mods, even if they are already present in the work directory.
+        -thunderstore-metadata-timeout duration
+                Timeout while downloading the thunderstore mod metadata. (default 10s)
         -thunderstore-metadata-url string
                 URL to the thunderstore metadata API. This can vary between games. (default "https://thunderstore.io/c/valheim/api/v1/package/")
         -version

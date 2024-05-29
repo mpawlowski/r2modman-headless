@@ -16,15 +16,16 @@ import (
 )
 
 type flags struct {
-	installDir                string
-	profileZip                string
-	runTimeout                time.Duration
-	thunderstoreCDNHost       string
-	thunderstoreCdnTimeout    time.Duration
-	thunderstoreForceDownload bool
-	thunderstoreMetadataURL   string
-	version                   bool
-	workDir                   string
+	installDir                  string
+	profileZip                  string
+	runTimeout                  time.Duration
+	thunderstoreCDNHost         string
+	thunderstoreCdnTimeout      time.Duration
+	thunderstoreForceDownload   bool
+	thunderstoreMetadataURL     string
+	thunderstoreMetadataTimeout time.Duration
+	version                     bool
+	workDir                     string
 }
 
 var Usage = func() {
@@ -49,6 +50,7 @@ func init() {
 	flag.StringVar(&options.thunderstoreCDNHost, "thunderstore-cdn-host", "gcdn.thunderstore.io", "Hostname of the thunderstore CDN to use.")
 	flag.DurationVar(&options.thunderstoreCdnTimeout, "thunderstore-cdn-timeout", 30*time.Second, "Timeout while downloading each mod.")
 	flag.StringVar(&options.thunderstoreMetadataURL, "thunderstore-metadata-url", "https://thunderstore.io/c/valheim/api/v1/package/", "URL to the thunderstore metadata API. This can vary between games.")
+	flag.DurationVar(&options.thunderstoreMetadataTimeout, "thunderstore-metadata-timeout", 10*time.Second, "Timeout while downloading the thunderstore mod metadata.")
 	flag.BoolVar(&options.version, "version", false, "Print version and exit.")
 	flag.StringVar(&options.workDir, "work-dir", "tmp/", "Temporary work directory for downloaded files.")
 	flag.Parse()
@@ -140,7 +142,10 @@ func run(
 		return err
 	}
 
-	packages, err := r2modman.GetPackagesMetadata(ctx, options.thunderstoreMetadataURL)
+	metadataCtx, metadataCtxCancel := context.WithTimeout(ctx, options.thunderstoreMetadataTimeout)
+	defer metadataCtxCancel()
+
+	packages, err := r2modman.GetPackagesMetadata(metadataCtx, options.thunderstoreMetadataURL)
 	if err != nil {
 		log.Printf("unable to pull thunderstore api: %s", err)
 		return err

@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"net/http"
-	"time"
 )
 
 type APIPackageResponse struct {
@@ -17,11 +16,16 @@ type APIPackageResponse struct {
 	} `json:"versions"`
 }
 
-var myClient = &http.Client{Timeout: 10 * time.Second}
+var myClient = &http.Client{}
 
 func GetPackagesMetadata(ctx context.Context, metadataUrl string) (packages map[string]*APIPackageResponse, err error) {
 
-	r, err := myClient.Get(metadataUrl)
+	req, err := http.NewRequestWithContext(ctx, "GET", metadataUrl, nil)
+	if err != nil {
+		return
+	}
+
+	r, err := myClient.Do(req)
 	if err != nil {
 		return
 	}

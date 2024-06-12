@@ -40,8 +40,9 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Development Build
           tag_name: "refs/tags/latest"
+          prerelease: true
+          fail_on_unmatched_files: true
           files: |
             LICENSE
             release-bin/**

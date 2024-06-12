@@ -32,6 +32,11 @@ jobs:
         run: |
           CGO_ENABLED=0 go build -ldflags "-X main.gitBranch=$GIT_BRANCH -X main.gitHash=$GIT_HASH -X main.gitDirty=$GIT_DIRTY"
 
+      - name: Copy Binary
+        run: |
+          mkdir -p release-bin/
+          cp r2modman-headless release-bin/r2modman-headless-linux-amd64
+
       - name: Tag Latest
         run: |
           git tag latest --force

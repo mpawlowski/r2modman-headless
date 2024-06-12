@@ -1,9 +1,9 @@
-name: Build - Continuous
+name: Build - Release
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - '**' 
 
 jobs:
   build:
@@ -31,8 +31,15 @@ jobs:
       - name: Build
         run: |
           CGO_ENABLED=0 go build -ldflags "-X main.gitBranch=$GIT_BRANCH -X main.gitHash=$GIT_HASH -X main.gitDirty=$GIT_DIRTY"
-
-      - name: Tag Latest
+      
+      - name: Copy Binary
         run: |
-          git tag latest --force
-          git push origin latest --force
+          mkdir -p release-bin/
+          cp r2modman-headless release-bin/r2modman-headless-linux-amd64
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            LICENSE
+            release-bin/**

@@ -40,17 +40,7 @@ jobs:
           mkdir -p release-bin/
           cp r2modman-headless release-bin/r2modman-headless-linux-amd64
 
-      - name: Release (Pre-Release)
-        uses: softprops/action-gh-release@v2
-        if: github.ref == 'refs/heads/main'
-        with:
-          name: latest
-          prerelease: true
-          files: |
-            LICENSE
-            release-bin/**
-
-      - name: Release (Tag)
+      - name: Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:

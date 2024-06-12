@@ -22,17 +22,11 @@ jobs:
       - name: Dependencies
         run: |
           go get .
-      
-      - name: Build Info
-        run: |
-          echo "GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)" >> "$GITHUB_ENV"
-          echo "GIT_HASH=$(git rev-parse --verify HEAD)" >> "$GITHUB_ENV"
-          echo "GIT_DIRTY=$(git diff --quiet; [ $? -eq 0 ] && echo false || echo true)" >> "$GITHUB_ENV"
 
       - name: Build
         run: |
-          CGO_ENABLED=0 go build -ldflags "-X main.gitBranch=$GIT_BRANCH -X main.gitHash=$GIT_HASH -X main.gitDirty=$GIT_DIRTY"
-      
+          ./src/bin/build-scripts/build.sh
+
       - name: Copy Binary
         run: |
           mkdir -p release-bin/

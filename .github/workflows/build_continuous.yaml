@@ -2,7 +2,10 @@ name: Build - Continuous
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+    tags:        
+      - '**' 
 
 jobs:
   build:

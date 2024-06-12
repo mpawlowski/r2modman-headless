@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git fetch --tags
+git fetch --tags --force
 latestTag=$(git tag | grep v | sort -V | tail -n 1)
 
 # Split the version into major, minor, patch
@@ -29,8 +29,14 @@ patch=$((patch + 1))
 # Assemble the new version
 newTag="$major.$minor.$patch"
 
-echo "New Tag: $newTag"
+echo "New Version ($major.$minor.$patch) -> ($newTag)"
 
-# # Create a new tag
-# git tag $newTag
-# git push origin $newTag
+read -p "Verify new version: " inputTag
+
+if [ "$inputTag" != "$newTag" ]; then
+    echo "Incorrect tag entered. Exiting..."
+    exit 1
+fi
+
+git tag $newTag
+git push origin $newTag

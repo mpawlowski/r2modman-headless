@@ -37,17 +37,12 @@ jobs:
           mkdir -p release-bin/
           cp r2modman-headless release-bin/r2modman-headless-linux-amd64
 
-      - name: Tag Latest
-        run: |
-          git tag latest --force
-          git push origin latest --force
-
-      - name: Release
-        uses: softprops/action-gh-release@v2
+      - uses: marvinpinto/action-automatic-releases@latest
         with:
-          tag_name: "refs/tags/latest"
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
           prerelease: true
-          fail_on_unmatched_files: true
+          title: "Development Build"
           files: |
             LICENSE
-            release-bin/**
+            release-bin/*
